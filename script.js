@@ -170,12 +170,12 @@ function buildPlaylist() {
      YOUR CODE GOES HERE:
      ===================================================== */
 
-      if (dropsCollected >= goal) {
-        message.textContent = "You win!";
-        message.className = "feedback-box success";
+      if (songs.length === 0) {
+        feedback.textContent = "no songs found";
+        feedback.className = "feedback-box error";
       } else {
-        message.textContent = "Try again!";
-        message.className = "feedback-box error";
+        feedback.textContent = `Loaded ${songs.length} songs!`;
+        feedback.className = "feedback-box success";
       }
 
   /* =====================================================
