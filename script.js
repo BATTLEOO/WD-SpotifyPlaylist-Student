@@ -192,7 +192,10 @@ function buildPlaylist() {
 
      YOUR CODE GOES HERE:
      ===================================================== */
-
+     songs.forEach(function(song, index) {
+      console.log(song);
+      console.log(index);
+    });
 
 
     /* =====================================================
