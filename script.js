@@ -119,7 +119,12 @@ function buildPlaylist() {
         the mode
      ===================================================== */
 
-
+      const mode = modeSelector.value;
+      if (mode === "quickPlay") {
+        songs = allSongs.slice(0, 3);
+      } else if (mode === "fullSession") {
+        songs = allSongs;
+      }
 
   /* =====================================================
      DEV TEAMS — STEP 6: Conditional Feedback
@@ -165,7 +170,13 @@ function buildPlaylist() {
      YOUR CODE GOES HERE:
      ===================================================== */
 
-
+      if (dropsCollected >= goal) {
+        message.textContent = "You win!";
+        message.className = "feedback-box success";
+      } else {
+        message.textContent = "Try again!";
+        message.className = "feedback-box error";
+      }
 
   /* =====================================================
      DEV TEAMS — STEP 7: The Loop (⭐⭐⭐ MOST IMPORTANT!)
